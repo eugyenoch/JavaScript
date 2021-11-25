@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Objects Cont'd</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+
+	<table>
+		<tr>
+			<th>Firstname</th><th>Lastname</th><th>Phone Number</th><th>Email Address</th><th>Age</th>
+		</tr>
+		<tr>
+			<td id="f1"></td>
+			<td id="f2"></td>
+			<td id="f3"></td>
+			<td id="f4"></td>
+			<td id="f5"></td>
+		</tr>
+		<tr>
+			<td id="s1"></td>
+			<td id="s2"></td>
+			<td id="s3"></td>
+			<td id="s4"></td>
+			<td id="s5"></td>
+		</tr>
+		<tr>
+			<td id="t1"></td>
+			<td id="t2"></td>
+			<td id="t3"></td>
+			<td id="t4"></td>
+			<td id="t5"></td>
+		</tr>
+	</table>
+
+	<button type="button" class="default cool btnHover" onclick="viewRecord();">VIEW RECORD</button>
+	<button type="button" class="default cool btnHover">CLEAR</button>
+	<button onclick="myprinter()" type="button" class="default cool btnHover">PRINT DATA</button>
+  
+<script>
+
+		let student=[
+		{firstname:"Peter",lastname:"Mark",phone:"+2349087654",email:"peter.mark@school.edu.ng",age:15},
+		{firstname:"Paul",lastname:"Markson",phone:"+2349085654",email:"paul.markson@school.edu.ng",age:16},
+		{firstname:"Ngozi",lastname:"Nkiru",phone:"+23490876908",email:"ngozi.nkiru@school.edu.ng",age:18}
+		];
+
+		function viewRecord(){
+			document.getElementById('f1').innerHTML=student[0].firstname;
+			document.getElementById('f2').innerHTML=student[0].lastname;
+			document.getElementById('f3').innerHTML=student[0].phone;
+			document.getElementById('f4').innerHTML=student[0].email;
+			document.getElementById('f5').innerHTML=student[0].age;
+
+			document.getElementById('s1').innerHTML=student[1]['firstname'];
+			document.getElementById('s2').innerHTML=student[1]['lastname'];
+			document.getElementById('s3').innerHTML=student[1]['phone'];
+			document.getElementById('s4').innerHTML=student[1]['email'];
+			document.getElementById('s5').innerHTML=student[1]['age'];
+
+			document.getElementById('t1').innerHTML=student[2].firstname;
+			document.getElementById('t2').innerHTML=student[2].lastname;
+			document.getElementById('t3').innerHTML=student[2].phone;
+			document.getElementById('t4').innerHTML=student[2].email;
+			document.getElementById('t5').innerHTML=student[2].age;
+
+		}
+
+		function myprinter(){
+			window.print();
+			document.querySelector('button').style.display='none';
+			
+		}
+		
+	</script>
